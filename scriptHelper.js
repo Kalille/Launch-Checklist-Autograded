@@ -57,26 +57,23 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     copilotStatusLi.textContent = `Co-pilot ${copilot} is ready for launch`
     // Check if any input field is empty or not a number
 if (fuelLevel >= 10000 && cargoMass <= 10000) {
-    console.log("Fuel level and cargo mass are good");
     statusMessage.textContent = "Shuttle is Ready for Launch";
     statusMessage.style.color = "green";
     fuelListItem.textContent = "Fuel level high enough for launch"; 
     cargoStatusLi.textContent = "Cargo mass low enough for launch";
+    list.style.visibility = "visible";
 } else {
     if (fuelLevel < 10000 && cargoMass > 10000) {
-        console.log("Fuel level is too low and cargo mass is too heavy");
         statusMessage.textContent = "Shuttle Not Ready for Launch";
         statusMessage.style.color = "red";
         fuelListItem.textContent = "Fuel level too low for launch";
         cargoStatusLi.textContent = "Cargo mass too heavy for launch";
     } else if (fuelLevel < 10000) {
-        console.log("Fuel level is too low");
         statusMessage.textContent = "Shuttle Not Ready for Launch";
         statusMessage.style.color = "red";
         fuelListItem.textContent = "Fuel level too low for launch";
         cargoStatusLi.textContent = "Cargo mass low enough for launch";
     } else if (cargoMass > 10000) {
-        console.log("Cargo mass is too heavy");
         statusMessage.textContent = "Shuttle Not Ready for Launch";
         statusMessage.style.color = "red";
         fuelListItem.textContent = "Fuel level high enough for launch"; 
