@@ -34,11 +34,10 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     const fuelLevelValidation = validateInput(fuelLevel);
     const cargoMassValidation = validateInput(cargoMass);
     if (pilotValidation === "Empty"|| copilotValidation === "Empty"|| fuelLevelValidation === "Empty"|| cargoMassValidation === "Empty"){
-        console.log(`${pilotValidation}`)
-        alert("All fields are required")
+         alert("All fields are required")
     }
     else if (fuelLevelValidation === "Not a Number" || cargoMassValidation === "Not a Number" ){
-        alert("Please enter a Number in the Fuel Level or Cargo Mass")
+         alert("Please enter a Number in the Fuel Level or Cargo Mass")
     }else if (pilotValidation === "Is a Number" || copilotValidation === "Is a Number"){
          alert("Pilot or Copilot is a number")
     } else
